@@ -112,17 +112,14 @@ const AdvocatePageList = () => {
   return (
     <Grid container>
         <Grid item>
-            {/* <div className="form--wrapper"> */}
-                <form onSubmit={searchData} id="search_form">
-                    <div className="header--container">
-                        <Header />
-                        <SearchBar />
-                    </div>
-                </form>
-            {/* </div> */}
+            <form onSubmit={searchData} id="search_form">
+                <div className="header--container">
+                    <Header />
+                    <SearchBar />
+                </div>
+            </form>
         </Grid>
-        {/* <Grid item xs={12} sm={8} xl={8}> */}
-            {/* <div className="main--container"> */}
+        <Grid item xs={12} sm={8} xl={8}>
             <div className="title--lable">
                 <h1>Choose Your Advocate</h1>
             </div>
@@ -179,9 +176,8 @@ const AdvocatePageList = () => {
                         <div>Nothing to display</div>
                     )} 
                 </Grid>
-            {/* </div> */}
         </Grid>
-    // </Grid>
+    </Grid>
   )
 }
 

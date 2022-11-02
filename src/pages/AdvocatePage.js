@@ -27,14 +27,12 @@ const AdvocatePage = () => {
 
   return (
     <>
-            <div className="header--container">
-                <Header />
-                {/* <div className="header--container--right"> */}
-                    <Link to={`/advocates/?page=${page}`}>
-                        <IconCancel className="icon--back"/>
-                    </Link>
-                {/* </div> */}
-            </div>
+        <div className="header--container">
+            <Header />
+                <Link to={`/advocates/?page=${page}`}>
+                    <IconCancel className="icon--back"/>
+                </Link>
+        </div>
         {advocate && (
             <>
                 <div className="advocate__page__name">

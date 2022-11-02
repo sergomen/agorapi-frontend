@@ -1,6 +1,9 @@
 /* http://kimberlygeswein.com */
 @import url('http://fonts.cdnfonts.com/css/just-me-again-down-here-2'); 
-
+@font-face {
+  font-family: "Just Me Again Down Here";
+  src: url('./assets/JustMeAgainDownHere.ttf');
+}
 
 body {
   background-color: #131415;
@@ -8,6 +11,10 @@ body {
 }
 a {
   color: aquamarine;
+}
+
+p {
+  overflow-wrap: break-word;
 }
 
 .title--lable {
@@ -75,19 +82,19 @@ a {
   border: 2px solid aquamarine;
 }
 
-.input {
+/* .input {
   padding: 1em;
   font-size: 16px;
   background-color: #2b3031;
   border-radius: 5px;
   border: none;
   color: #fff;
-}
+} */
 
-.btn--primary {
+/* .btn--primary {
   background-color: aqua;
   color: rgb(202, 15, 15);
-}
+} */
 
 /*
 *****************
@@ -118,7 +125,7 @@ for advocate page
   position: absolute;
   top: 60%;
   left: 70%;
-  transform: translate(-60%, -70%);
+  /* transform: translate(-60%, -70%); */
   font-size: 2.8em;
 }
 
@@ -171,7 +178,6 @@ q::after {
   content: close-quote;
 }
 
-
 .container--pagination{
   list-style: none;
   position: fixed;
@@ -181,7 +187,6 @@ q::after {
 
 .page{
   padding: 10px;
-  /* border: 1px solid #dcdcdc; */
   border-radius: 6px;
   margin-right: 10px;
   cursor: pointer;
@@ -216,12 +221,10 @@ q::after {
   border-radius: 6px;
   margin-right: 10px;
   cursor: pointer;
-  /* font-size: 10px; */
 }
 
 .disabled{
   cursor: not-allowed;
-  
 }
 
 .active{
@@ -251,19 +254,27 @@ q::after {
 @media screen and (max-width: 600px) {
   .title--lable {
     font-family: "Just Me Again Down Here";
-    font-size: 1em;
+    font-size: 0.5em;
     color: rgb(0, 255, 34); 
     position: absolute;
-    left: 10%;
-    top: 10%;
+    left: 5%;
+    top: 13%;
   }
   
   .available--advocates {
     position: absolute;
     font-size: 0.7em;
-    left: 30%;
-    top: 10%;
+    left: 18%;
+    top: 11%;
     color: rgb(174, 22, 204);
+  }
+  
+  .found--advocates {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -10%);
+    font-size: 12px;
   }
   
   .advocate__list {
@@ -272,23 +283,30 @@ q::after {
     gap: 0.3em;
     position: absolute;
     left: 50%;
-    top: 70%;
-    /* transform: translate(-50%, -10%); */
-    width: 200px;
+    top: 80%;
+    transform: translate(-50%, -80%);
+    width: 230px;
     height: 800px;
     border:1px solid rgb(19, 146, 146);
   }
 
   .active--advocate {
     position: absolute;
-    left: 60%;
+    left: 50%;
     top: -60%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -60%);
+  }
+
+  .active__advocate__preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid aquamarine;
   }
 
   .advocate__preview__image {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 2px solid aquamarine;
   }
@@ -302,19 +320,10 @@ q::after {
   }
 
   .container--pagination{
-    /* display: flex; */
-    /* flex-wrap: column; */
     list-style: none;
     position: fixed;
-    left: 80%;
+    left: 78%;
     top: 30%;
-  }
-
-  .container--pagination--single{
-    list-style: none;
-    position: fixed;
-    left: 80%;
-    top: 40%;
   }
 
   .page-break{
@@ -322,16 +331,16 @@ q::after {
     border-radius: 6px;
     margin-right: 10px;
     cursor: pointer;
-    /* font-size: 10px; */
   }
 
   .page-previous{
     position: fixed;
-    left: 5%;
-    top: 64%;
-    padding: 10px;
+    left: 4%;
+    top: 79%;
+    transform: translate(-4%, -79%);
+    /* padding: 10px; */
     border-radius: 6px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     cursor: pointer;
     font-size: 5em;
     color: rgb(0, 255, 34); 
@@ -339,21 +348,15 @@ q::after {
   
   .page-next{
     position: fixed;
-    left: 80%;
-    top: 64%;
-    padding: 10px;
+    left: 75%;
+    top: 79%;
+    transform: translate(0%, -79%);
+    /* padding: 10px; */
     border-radius: 6px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     cursor: pointer;
     font-size: 5em;
     color:rgb(0, 255, 34); 
-  }
-
-  .found--advocates {
-    position: absolute;
-    left: 30%;
-    top: 50%;
-    font-size: 12px;
   }
 
   /*
@@ -370,9 +373,9 @@ q::after {
 
   .advocate__page__image {
     position: absolute;
-    top: 40%;
-    left: 43%;
-    transform: translate(-40%, -20%);
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
     width: 350px;
     height: 350px;
     border-radius: 5%;
@@ -382,20 +385,20 @@ q::after {
   .advocate__page__bio {
     font-family: "Just Me Again Down Here";
     position: absolute;
-    top: 140%;
-    left: 60%;
-    font-size: 2.8em;
+    left: 0.25%;
+    top: 100%;
+    font-size: 2.2em;
     width: 370px;
-    max-width: 400px;
-    max-height: 800px;
-    /* border:1px solid rgb(19, 130, 182); */
+    max-width: 370px;
+    height: auto;
+    border:1px solid rgb(19, 130, 182);
   }
 
   .advocate__page__twitter {
     position: absolute;
-    top: 90%;
-    left: 40%;
-    transform: translate(-40%, -90%);
+    left: 50%;
+    top: 92%;
+    transform: translate(-50%, -92%);
     font-size: 1.8em;
   }
   
@@ -415,10 +418,10 @@ q::after {
   }
   
   .icon--twitter {
-    position: relative;
-    left: 40%;
-    top: 5%;
-    transform: translate(20%, -50%);
+    position: absolute;
+    left: 50%;
+    top: -40%;
+    transform: translate(-50%, -40%);
   }
 }
 
