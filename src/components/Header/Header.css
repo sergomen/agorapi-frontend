@@ -67,5 +67,18 @@ a:active { text-decoration: none; }
   .search {
     width: 90%;
     height: 20%;
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .search {
+    width: 90%;
+  }
 }
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .search {
+    width: 135%;
+  }
+}
+

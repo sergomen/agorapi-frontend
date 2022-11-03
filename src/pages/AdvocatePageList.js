@@ -38,18 +38,19 @@ const AdvocatePageList = () => {
         console.log("Page active in use Effect", pageActive)
 
         const query = window.sessionStorage.getItem("searchQuery")
+        console.log('Queryes in useEffect', query)
         search_field.value = query
 
         getAdvocates(query, pageActive)
-
-        
-
     }, [currentPage])
     
     let getAdvocates = async (query='', currentPage=1) => {
         const { searchResults, pageActive } = JSON.parse(
 			window.sessionStorage.getItem("searchDetails")
 		)
+        if (query == null) {
+            query = ''
+        }
         console.log("Search Query after typing text in searching", query)
         
         let response = await fetch(`https://cados.up.railway.app/advocates/?query=${query}&page=${currentPage}`)

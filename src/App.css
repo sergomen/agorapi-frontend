@@ -47,12 +47,10 @@ p {
   left: 50%;
   top: 70%;
   transform: translate(-50%, -70%);
-  /* margin-top: 10px;
-  margin-left: 100px; */
   width: auto;
   height: auto;
   max-width: 440px;
-  max-height: 200px;;
+  max-height: 200px;
   border:1px solid rgb(19, 146, 146);
 }
 
@@ -82,20 +80,6 @@ p {
   border: 2px solid aquamarine;
 }
 
-/* .input {
-  padding: 1em;
-  font-size: 16px;
-  background-color: #2b3031;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-} */
-
-/* .btn--primary {
-  background-color: aqua;
-  color: rgb(202, 15, 15);
-} */
-
 /*
 *****************
 for advocate page
@@ -123,10 +107,12 @@ for advocate page
 .advocate__page__bio {
   font-family: "Just Me Again Down Here";
   position: absolute;
-  top: 60%;
-  left: 70%;
-  /* transform: translate(-60%, -70%); */
+  left: 40%;
+  top: 40%;
   font-size: 2.8em;
+  width: auto;
+  max-width: 1000px;
+  height: auto;
 }
 
 .advocate__page__twitter {
@@ -272,8 +258,8 @@ q::after {
   .found--advocates {
     position: absolute;
     left: 50%;
-    top: 52%;
-    transform: translate(-50%, -10%);
+    top: 55%;
+    transform: translate(-50%, -70%);
     font-size: 12px;
   }
   
@@ -293,8 +279,8 @@ q::after {
   .active--advocate {
     position: absolute;
     left: 50%;
-    top: -60%;
-    transform: translate(-50%, -60%);
+    top: -50%;
+    /* transform: translate(-50%, -60%); */
   }
 
   .active__advocate__preview {
@@ -348,7 +334,7 @@ q::after {
   
   .page-next{
     position: fixed;
-    left: 75%;
+    left: 76%;
     top: 79%;
     transform: translate(0%, -79%);
     /* padding: 10px; */
@@ -385,13 +371,13 @@ q::after {
   .advocate__page__bio {
     font-family: "Just Me Again Down Here";
     position: absolute;
-    left: 0.25%;
+    left: 50%;
     top: 100%;
+    transform: translate(-50%, 0%);
     font-size: 2.2em;
     width: 370px;
     max-width: 370px;
     height: auto;
-    border:1px solid rgb(19, 130, 182);
   }
 
   .advocate__page__twitter {
@@ -442,6 +428,13 @@ q::after {
     top: 10%;
     color: rgb(174, 22, 204);
   }
+
+  .found--advocates {
+    position: absolute;
+    left: 38%;
+    top: 50%;
+    font-size: 12px;
+  }
   
   .advocate__list {
     display: flex;
@@ -470,15 +463,6 @@ q::after {
     border: 2px solid aquamarine;
   }
 
-  .container--pagination{
-    display: flex;
-    list-style: none;
-    position: fixed;
-    left: 95%;
-    top: 70%;
-    /* transform: translate(15%, -60%); */
-  }
-
   .page{
     padding: 4px;
     border: 1px solid #dcdcdc;
@@ -490,15 +474,8 @@ q::after {
   .container--pagination{
     list-style: none;
     position: fixed;
-    left: 1%;
-    top: 92%;
-  }
-
-  .container--pagination--single{
-    list-style: none;
-    position: fixed;
-    left: 93%;
-    top: 40%;
+    left: 88%;
+    top: 30%;
   }
 
   .page-break{
@@ -511,7 +488,7 @@ q::after {
 
   .page-previous{
     position: fixed;
-    left: 32%;
+    left: 22%;
     top: 61%;
     padding: 10px;
     border-radius: 6px;
@@ -523,7 +500,7 @@ q::after {
   
   .page-next{
     position: fixed;
-    left: 62%;
+    left: 68%;
     top: 61%;
     padding: 10px;
     border-radius: 6px;
@@ -531,13 +508,6 @@ q::after {
     cursor: pointer;
     font-size: 7em;
     color:rgb(0, 255, 34); 
-  }
-
-  .found--advocates {
-    position: absolute;
-    left: 42%;
-    top: 50%;
-    font-size: 12px;
   }
 
   /*
@@ -564,30 +534,29 @@ q::after {
   }
 
   .advocate__page__bio {
-    font-family: "Just Me Again Down Here";
-    position: absolute;
-    top: 140%;
-    left: 60%;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
     font-size: 2.8em;
     width: 370px;
     max-width: 400px;
     max-height: 800px;
-    /* border:1px solid rgb(19, 130, 182); */
   }
 
   .advocate__page__twitter {
     position: absolute;
+    left: 50%;
     top: 90%;
-    left: 40%;
-    transform: translate(-40%, -90%);
+    
+    transform: translate(-50%, -90%);
     font-size: 1.8em;
   }
   
   .advocate__page__twitter__followers {
     position: absolute;
+    left: 50%;
     top: 98%;
-    left: 48%;
-    transform: translate(-48%, -98%);
+    transform: translate(-50%, -98%);
     font-size: 1em;
     color: rgb(0, 255, 34); 
   }
@@ -595,7 +564,7 @@ q::after {
   .icon--back {
     position: absolute;
     top: 1%;
-    left: 82%;
+    left: 90%;
   }
   
   .icon--twitter {
@@ -604,4 +573,145 @@ q::after {
     top: 5%;
     transform: translate(20%, -50%);
   }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1800px) {
+  .title--lable {
+    font-family: "Just Me Again Down Here";
+    font-size: 1.2em;
+    color: rgb(0, 255, 34); 
+    position: absolute;
+    left: 10%;
+    top: 35%;
+  }
+  
+  .available--advocates {
+    position: absolute;
+    font-size: 0.9em;
+    left: 19%;
+    top: 36%;
+    color: rgb(174, 22, 204);
+  }
+  
+  .found--advocates {
+    position: absolute;
+    left: 44%;
+    top: 75%;
+    font-size: 12px;
+  }
+  
+  .advocate__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    width: auto;
+    height: auto;
+    max-width: 440px;
+    max-height: 200px;
+    border:1px solid rgb(19, 146, 146);
+  }
+
+  .active--advocate {
+    position: absolute;
+    left: 50%;
+    top: -80%;
+    transform: translate(-50%, -80%);
+  }
+
+  .active__advocate__preview {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid aquamarine;
+  }
+
+  .advocate__preview__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid aquamarine;
+  }
+
+  .page{
+    padding: 4px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .container--pagination{
+    list-style: none;
+    position: fixed;
+    left: 94%;
+    top: 30%;
+  }
+
+  .page-break{
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .page-previous{
+    position: fixed;
+    left: 27%;
+    top: 59%;
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 5em;
+    color: rgb(0, 255, 34); 
+  }
+  
+  .page-next{
+    position: fixed;
+    left: 67%;
+    top: 59%;
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 5em;
+    color:rgb(0, 255, 34); 
+  }
+
+  /*
+  *********************
+  for Advocate page
+  *********************
+  */
+  .advocate__page__name {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-size: 1.5em;
+  }
+
+  .advocate__page__bio {
+    font-family: "Just Me Again Down Here";
+    position: absolute;
+    left: 0.25%;
+    top: 100%;
+    font-size: 2.2em;
+    width: 370px;
+    max-width: 370px;
+    height: auto;
+  }
+
+  .advocate__page__bio {
+    left: 40%;
+    top: 40%;
+    font-size: 2.5em;
+    width: auto;
+    max-width: 800px;
+    height: auto;
+  }
+
 }
