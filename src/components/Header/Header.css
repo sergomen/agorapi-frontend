@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Just Me Again Down Here";
+  src: url('./../../assets/JustMeAgainDownHere.ttf');
+}
 
 .title--logo {
   font-family: "Just Me Again Down Here";
