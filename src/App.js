@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import HomePage from './pages/HomePage'
 import AdvocatePageList from './pages/AdvocatePageList'
 import AdvocatePage from './pages/AdvocatePage'
 import './App.css';
