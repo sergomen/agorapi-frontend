@@ -51,7 +51,7 @@ p {
   height: auto;
   max-width: 440px;
   max-height: 200px;
-  border:1px solid rgb(19, 146, 146);
+  /* border:1px solid rgb(19, 146, 146); */
 }
 
 .active--advocate {
@@ -273,7 +273,7 @@ q::after {
     transform: translate(-50%, -80%);
     width: 230px;
     height: 800px;
-    border:1px solid rgb(19, 146, 146);
+    /* border:1px solid rgb(19, 146, 146); */
   }
 
   .active--advocate {
@@ -371,7 +371,7 @@ q::after {
   .advocate__page__bio {
     font-family: "Just Me Again Down Here";
     position: absolute;
-    left: 50%;
+    left: 52%;
     top: 100%;
     transform: translate(-50%, 0%);
     font-size: 2.2em;
@@ -446,7 +446,7 @@ q::after {
     /* transform: translate(-50%, -10%); */
     width: 200px;
     height: 800px;
-    border:1px solid rgb(19, 146, 146);
+    /* border:1px solid rgb(19, 146, 146); */
   }
 
   .active--advocate {
@@ -517,8 +517,9 @@ q::after {
   */
   .advocate__page__name {
     position: absolute;
+    left: 25%;
     top: 15%;
-    left: 10%;
+    transform: translate(20%, 0%);
     font-size: 1.5em;
   }
 
