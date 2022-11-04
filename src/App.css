@@ -242,7 +242,7 @@ q::after {
 
 @media screen and (max-width: 600px) {
   .title--lable {
-    font-family: "kalam.regular";
+    font-family: "Just Me Again Down Here";
     font-size: 0.5em;
     color: rgb(0, 255, 34); 
     position: absolute;
@@ -372,7 +372,7 @@ q::after {
   }
 
   .advocate__page__bio {
-    font-family: "Just Me Again Down Here";
+    font-family: "kalam.regular";
     position: absolute;
     left: 52%;
     top: 100%;
@@ -440,11 +440,27 @@ q::after {
     width: 230px;
     height: 800px;
   }
+
+  .available--advocates {
+    position: absolute;
+    font-size: 0.7em;
+    left: 18%;
+    top: 10%;
+    color: rgb(174, 22, 204);
+  }
+  
+  .found--advocates {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .title--lable {
-    font-family: "kalam.regular";
+    font-family: "Just Me Again Down Here";
     font-size: 1em;
     color: rgb(0, 255, 34); 
     position: absolute;
@@ -567,6 +583,7 @@ q::after {
 
   .advocate__page__bio {
     position: absolute;
+    font-family: "kalam.regular";
     left: 50%;
     top: 100%;
     transform: translate(-50%, 0);
@@ -611,7 +628,7 @@ q::after {
 
 @media screen and (min-width: 1201px) and (max-width: 1800px) {
   .title--lable {
-    font-family: "kalam.regular";
+    font-family: "Just Me Again Down Here";
     font-size: 1.2em;
     color: rgb(0, 255, 34); 
     position: absolute;
@@ -729,7 +746,7 @@ q::after {
   }
 
   .advocate__page__bio {
-    font-family: "Just Me Again Down Here";
+    font-family: "kalam.regular";
     position: absolute;
     left: 0.25%;
     top: 100%;
