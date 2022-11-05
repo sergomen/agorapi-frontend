@@ -45,38 +45,31 @@ const AdvocatePageList = () => {
     }, [currentPage])
     
     let getAdvocates = async (query='', currentPage=1) => {
-        const { searchResults, pageActive } = JSON.parse(
-			window.sessionStorage.getItem("searchDetails")
-		)
         if (query == null) {
             query = ''
         }
-        // console.log("Search Query after typing text in searching", query)
         
         let response = await fetch(`https://cados.up.railway.app/advocates/?query=${query}&page=${currentPage}`)
-        // console.log('Current Page', currentPage)
         let data = await response.json()
-        // console.log('data', data)
+
         setAdvocates(data.advocates)
         setTotal(data.total)
         setPagination(data.pagination)
         
         window.sessionStorage.setItem("searchDetails", JSON.stringify({searchQuery: query, searchResults: data.advocates, pageActive: currentPage}))
         
-        // console.log("Page active in getAdvocates", pageActive)
         if (Object.keys(data.pagination.pages).length <= 1) {
             setPreviousLabel(null)
             setNextLabel(null)
         } else {
             setNextLabel('>')
         }
-        if (currentPage == 1) {
+        if (currentPage === 1) {
             setPreviousLabel(null)
-            
         } else {
             setPreviousLabel('<')
         }
-        if (currentPage == Object.keys(data.pagination.pages).length) {
+        if (currentPage === Object.keys(data.pagination.pages).length) {
             setNextLabel(null)
         }
         setPageCount(Object.keys(data.pagination.pages).length);
@@ -85,9 +78,7 @@ const AdvocatePageList = () => {
 
     let searchData = (e) => {
         let query = e.target.query.value
-        // console.log('Query', query)
         window.sessionStorage.setItem("searchQuery", query)
-        console.log("searchData -> searchQuery", window.sessionStorage.getItem("searchQuery"))
         getAdvocates(query)
         e.preventDefault()
     }
@@ -101,11 +92,8 @@ const AdvocatePageList = () => {
   
     const handlePageChange = (selectedObject) => {
         setCurrentPage(selectedObject.selected + 1);
-        // console.log("handlePageChange currentPage", currentPage)
         window.sessionStorage.setItem("searchDetails", JSON.stringify({ pageActive: selectedObject.selected + 1}))
-        // console.log("Selected object", selectedObject.selected + 1)
         const query = window.sessionStorage.getItem("searchQuery")
-        // console.log("HandlePageChange -> searchQuery", query)
         getAdvocates(query, selectedObject.selected + 1)
     };
 
@@ -141,14 +129,14 @@ const AdvocatePageList = () => {
                                     {activeAdvocate === advocate.name && 
                                         <div className="active--advocate">
                                             <Link to={`/advocates/${advocate.username}/${currentPage}`}>
-                                                <img                className="active__advocate__preview" src={advocate.profile_pic} /><br />
+                                                <img                className="active__advocate__preview" src={advocate.profile_pic} alt="active_adv_preview_img" /><br />
                                                 <strong>{advocate.name}</strong><br />
                                             </Link>
                                         </div>
                                     }
                                     <div className="advocate__preview__wrapper">
                                         <Link onClick={handleClick(advocate, index)}>
-                                            <img className="advocate__preview__image" src={advocate.profile_pic} />
+                                            <img className="advocate__preview__image" src={advocate.profile_pic} alt="adv_preview_img" />
                                         </Link>
                                     </div>   
                             </div>
