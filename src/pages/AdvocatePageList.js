@@ -51,19 +51,19 @@ const AdvocatePageList = () => {
         if (query == null) {
             query = ''
         }
-        console.log("Search Query after typing text in searching", query)
+        // console.log("Search Query after typing text in searching", query)
         
         let response = await fetch(`https://cados.up.railway.app/advocates/?query=${query}&page=${currentPage}`)
-        console.log('Current Page', currentPage)
+        // console.log('Current Page', currentPage)
         let data = await response.json()
-        console.log('data', data)
+        // console.log('data', data)
         setAdvocates(data.advocates)
         setTotal(data.total)
         setPagination(data.pagination)
         
         window.sessionStorage.setItem("searchDetails", JSON.stringify({searchQuery: query, searchResults: data.advocates, pageActive: currentPage}))
         
-        console.log("Page active in getAdvocates", pageActive)
+        // console.log("Page active in getAdvocates", pageActive)
         if (Object.keys(data.pagination.pages).length <= 1) {
             setPreviousLabel(null)
             setNextLabel(null)
@@ -85,7 +85,7 @@ const AdvocatePageList = () => {
 
     let searchData = (e) => {
         let query = e.target.query.value
-        console.log('Query', query)
+        // console.log('Query', query)
         window.sessionStorage.setItem("searchQuery", query)
         console.log("searchData -> searchQuery", window.sessionStorage.getItem("searchQuery"))
         getAdvocates(query)

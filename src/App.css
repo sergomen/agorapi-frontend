@@ -165,6 +165,10 @@ q::after {
   content: close-quote;
 }
 
+/*
+Styles for Pagination
+*/
+
 .container--pagination{
   list-style: none;
   position: fixed;

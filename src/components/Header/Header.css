@@ -11,59 +11,33 @@
   margin-top: 10px;
   text-decoration: none; 
 }
+
 a:link { text-decoration: none; }
-
-
 a:visited { text-decoration: none; }
-
-
 a:hover { text-decoration: none; }
-
-
 a:active { text-decoration: none; }
-
-
-
-.header--container {
-  display: flex;
-}
 
 .header--container--right {
   position: absolute;
   left: 50%;
   top: 5%;
-  /* transform: translate(30%, 5%); */
 }
   
 .search {
-    width: 200%;
-    height: 70%;
-}
-
-.back {
-  position: absolute;
-  left: 70%;
-  font-size: 2em;
-  color: rgb(0, 255, 34); 
-  transform: translate(-20%, 0%);
+  width: 200%;
+  height: 70%;
 }
 
 @media screen and (max-width: 400px) {
 
   .title--logo {
-    font-family: "Just Me Again Down Here";
     font-size: 1.5em;
-    color: red;
     margin-left: 20px;
     margin-top: 15px;
-    text-decoration: none; 
   }
 
   .header--container--right {
-    position: absolute;
-    left: 50%;
     top: 2%;
-    transform: translate(0%, 0%);
   }
 
   .search {
@@ -83,4 +57,3 @@ a:active { text-decoration: none; }
     width: 135%;
   }
 }
-

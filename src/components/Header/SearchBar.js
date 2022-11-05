@@ -1,14 +1,10 @@
 import React from 'react'
 import TextField from "@mui/material/TextField";
-import { styled } from '@mui/material/styles';
 import './Header.css';
-import { Grid } from '@mui/material';
 
 const SearchBar = () => {
 
   return (
-    // <Grid container>
-    //   <Grid item>
         <div className="header--container--right">
           <div className="search">
               <TextField
@@ -23,8 +19,6 @@ const SearchBar = () => {
               />
             </div>
           </div>
-    //   </Grid>
-    // </Grid>
   )
 }
 
